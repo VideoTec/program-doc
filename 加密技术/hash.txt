@@ -1,0 +1,11 @@
+/frameworks/av/media/libstagefright/foundation/AAtomizer.cpp
+// static
+uint32_t AAtomizer::Hash(const char *s) {
+    uint32_t sum = 0;
+    while (*s != '\0') {
+        sum = (sum * 31) + *s;
+        ++s;
+    }
+
+    return sum;
+}

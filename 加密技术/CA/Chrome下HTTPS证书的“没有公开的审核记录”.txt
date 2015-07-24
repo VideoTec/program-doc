@@ -1,0 +1,17 @@
+http://www.zhihu.com/question/29249467
+
+transparency[英][trænsˈpærənsi] [美][trænsˈpɛrənsi, -ˈpær-] n.透明；透明度；透明性；透明的东西
+
+Chrome下HTTPS证书的“没有公开的审核记录”是什么意思？
+
+是指没有Certificate Transparency记录
+（Certificate Transparency，https://tools.ietf.org/html/rfc6962）。
+Certificate Transparency是用来避免CA发假证书的
+
+http://news.networkmagazine.com.tw/classification/security/2015/03/27/64944/
+除了之前傳出的種種瑕疵之外，SSL系統的問題是，以為憑證機構永遠發出的都是好的憑證。
+歷史證明這是錯的想法–許多憑證機構都被駭入過，包括Verisign和現在已經倒閉的DigiNotar等。
+Google 希望能以「憑證透明度計畫(Certificate Transparency initiatives)」改良憑證頒發的流程
+
+initiatives[英][ɪ'nɪʃətɪvz] [美][ɪ'nɪʃətɪvz] n.主动性( initiative的名词复数 )；主动的行动；初步；主动权
+initiative[英][ɪˈnɪʃətɪv] [美][ɪˈnɪʃətɪv] n.主动性；主动精神；倡议；主动权

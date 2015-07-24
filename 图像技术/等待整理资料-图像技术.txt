@@ -1,0 +1,24 @@
+			反转色 互补色
+			RED Channel – 曲線向上 (增加紅色red) / 向下 (增加青色cyan)
+
+GREEN Channel – 曲線向上 (增加綠色green) / 向下 (增加洋紅色magenta)
+
+BLUE Channel – 曲線向上 (增加藍色blue) / 向下 (增加黃色yellow)
+
+
+
+
+
+
+
+
+acv文件格式，色度曲线文件
+int version = readShort(input);
+int totalCurves = readShort(input);
+
+每条曲线，有几个点
+short pointCount = readShort(input);
+
+每个点
+short y = readShort(input);
+short x = readShort(input);

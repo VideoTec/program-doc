@@ -1,0 +1,15 @@
+11:00 2015/5/11
+
+developer.android.com 提示证书错误
+颁发给 cc-jp.jiran.com
+颁发者 SpamSniper Root CA
+
+可能的原因：
+使用 GoGo Tester 自带好ip版.exe 搜出的某个IP是假的
+解决方法：
+手动检测，一次只用一个IP
+
+正常的根证书应该是
+GeoTrust Global CA
+颁发给 developer.android.com
+颁发者 Google Internet Authority G2
