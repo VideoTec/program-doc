@@ -1,0 +1,240 @@
+2014.10.14 【计划】《C99标准的 "7.18 Integer types <stdint.h> "》
+2014.10.14 【计划】《VS2013集成YASM方法》
+2014.10.14 【计划】《使用VC2013编译X264》
+                   《X264的config.h分析》
+2014.10.15 【计划】《编译64位x264》
+				   《x264ASM assembly language - x86inc.asm》
+				   《X264和opencl》
+2014.10.15 【计划】《VS2013构建64位程序》
+                   《微软SDL( Security Development Lifecycle)》
+2014.10.15 【计划】《怎么判断CPU指令集？怎么用不同的指令集实现相同的功能？》 参考《X264的config.h分析.txt》
+2014.10.15 【计划】《x86指令集总结 多媒体指令集 精简指令集（RISC） 复杂指令集（CISC）》
+2014.10.15 【计划】《前文参考之适应性二元算术编码（Context-based Adaptive Binary Arithmetic Coding，简称CABAC）是视讯压缩标准H.264采用的算法》
+2014.10.15 【计划】《libx264接口基本用法》
+2014.10.14 【计划】《libav基础框架》
+2014.10.14 【计划】《理解：--enable-runtime-cpudetect》
+2014.10.14 【计划】《avlog, 是什么机制？》
+2014.10.14 【计划】《VC2013编译libav基础框架》
+2014.10.14 【计划】《libav的config.h理解 --> 整理知识点》《libav config.h arch篇》《libav config.h HAVE篇》《libav config.h CONFIG篇》
+2014.10.16 【计划】《ARMv8 && AArch64 && A64 指令集 aarch64》《IA-64 && x64》 《常见CPU指令集汇总》
+2014.10.16 【计划】《.symver汇编宏指令》《Fast unaligned memory access》
+2014.10.16 【计划】《GNU C的一大特色（却不被初学者所知）就是__attribute__机制》
+2014.10.17 【计划】《libav 从makefile整理出源文件列表》
+2014.10.17 【计划】《arpa/inet.h 与 winsock2.h》《_isatty》《IIDC Camera Control Library libdc1394》《内存屏障 memory barrier 乱序执行》
+                   《video 4 linux 2》《clobbered registers》
+2014.10.20 【计划】《libav ERContext》《Sine（正弦） Window》
+2014.10.21 【计划】《VC -nologo：如果不加这个选项，就会输出编译命令行》
+/nologo表示编译时不在输出窗口显示这些设置
+Suppresses the display of the copyright banner when the compiler starts up and display of informational messages during compiling.
+
+Visual Studio allows displaying the commandline arguments passed to cl.exe in the output window, by switching off "Suppress Startup Banner", from Configuration Properties, C/C++, General. 
+I think this is a great option, 
+for example because it helps developers to quickly find errors caused by misconfiguration. 
+As far as I know, Visual Studio offered this option for many years already. 
+However, with Visual Studio 2010, switching off "Suppress Startup Banner" triggers a warning:
+ 
+ 1>cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release
+ 
+ Please do not remove the option 'nologo-'! 
+ Rob Pan [MSFT] recommended me to submit this issue. 
+ Please have a look at our discussion at Visual C++ Developer Center > Visual C++ Forums > Visual C++ General:
+ 
+ Subject: No Suppress Startup Banner, "warning D9035: option 'nologo-' has been deprecated"
+ http://social.msdn.microsoft.com/Forums/en-US/vcgeneral/thread/e4303733-23ff-418d-a124-8ae7826783a0 
+ 
+ PS Of course, I would also appreciate if you could allow disabling warning D9035, but that's already reported before, by Avery Lee: https://connect.microsoft.com/VisualStudio/feedback/details/100055/cl-exe-command-line-warnings-cannot-be-disabled
+ 
+2014.10.22 【计划】《libav asm PREFIX宏的作用》E:\libav\libavutil\x86\x86inc.asm
+%ifdef PREFIX
+    %define mangle(x) _ %+ x
+%else
+    %define mangle(x) x
+%endif
+2014.10.22 【计划】《libavutil/log2_tab.c》
+2014.10.22 【计划】《ffmpeg与x264编码指南》http://blog.csdn.net/vblittleboy/article/details/8982857
+2014.10.23 【计划】《libavformat makefile分析》《libavcodec makefile分析》《_avpriv_ac3_channel_layout_tab _ff_flv_encoder 命名格式 avpriv_ ff_ 区别》
+2014.10.24 【计划】《solution explorer：Show All Files》《VS扩展插件 DTE and DTE2 Objects： Visual Studio 自动化对象模型 Development Tools Extensibility》
+2014.10.25 【计划】《_WIN32_WINNT宏》
+ 0x0501（用于 Windows XP）、0x0502（用于 Windows Server 2003）、0x0600（用于 Windows Vista）和 0x0601（用于 Windows 7）
+ Windows???XP??????????????????????????????????????_WIN32_WINNT>=0x0501?????
+ Windows???2000???????????????????????????????????_WIN32_WINNT>=0x0500?????
+ Windows???NT???4.0???????????????????????????????_WIN32_WINNT>=0x0400?????
+ Windows???Me??????????????????????????????????????_WIN32_WINDOWS=0x0490?????
+ Windows???98??????????????????????????????????????_WIN32_WINDOWS>=0x0410?
+ ????
+ Internet???Explorer???6.0?????????????????????????_WIN32_IE>=0x0600?????
+ Internet???Explorer???5.01,???5.5????????????????_WIN32_IE>=0x0501?????
+ Internet???Explorer???5.0,???5.0a,???5.0b????????_WIN32_IE>=0x0500?????
+ Internet???Explorer???4.01???????????????????????_WIN32_IE>=0x0401????
+ Internet???Explorer???4.0????????????????????????_WIN32_IE>=0x0400?????
+ Internet???Explorer???3.0,???3.01,???3.02????????_WIN32_IE>=0x0300
+ 2014.10.25 【计划】《-D_ISOC99_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE宏》
+ http://www.gnu.org/software/libc/manual/html_node/Feature-Test-Macros.html
+ http://www.firstobject.com/fseeki64-ftelli64-in-vc++.htm
+ Most UNIX flavor compilers like gcc are standardized on the ftello and fseeko which use the off_t integer type that depends on compiler setup. The functions resolve to the old fseek/ftell or huge fseeko64/ftello64 in concert with the _FILE_OFFSET_BITS and _LARGEFILE_SOURCE macro defines.
+Unfortunately VC++ doesn't use this system.
+
+2014.10.25 【计划】《_WIN32宏》
+http://stackoverflow.com/questions/662084/whats-the-difference-between-the-win32-and-win32-defines-in-c
+_WIN32 is defined by the compiler so it uses the underscore to place it in the implementation-reserved namespace
+_WIN32 is automatically defined by the visual C/C++ compiler. 
+
+2014.10.25 【计划】《_WIN32宏》
+http://stackoverflow.com/questions/1094481/any-msvc-equivalent-to-gcc-include-flag
+In GCC you can use the '-include ' flag to automatically include a file in the compilation unit. 
+In VS, you'll find it as: "Forced Include Files". The tag is /FI
+
+2014.10.27 【计划】《CONFIG_HARDCODED_TABLES CONFIG_ZLIB》
+			E:\libav\libavcodec\svq3.c
+            av_log(avctx, AV_LOG_ERROR,
+                   "this svq3 file contains watermark which need zlib support compiled in\n");
+            return -1;
+			E:\libav\libavformat\mov.c
+			av_log(c->fc, AV_LOG_ERROR, "this file requires zlib support compiled in\n");
+            return AVERROR(ENOSYS);
+ifdef CONFIG_HARDCODED_TABLES
+$(SUBDIR)aacdec.o: $(SUBDIR)cbrt_tables.h
+$(SUBDIR)aacps.o: $(SUBDIR)aacps_tables.h
+$(SUBDIR)aactab.o: $(SUBDIR)aac_tables.h
+$(SUBDIR)dvenc.o: $(SUBDIR)dv_tables.h
+$(SUBDIR)sinewin.o: $(SUBDIR)sinewin_tables.h
+$(SUBDIR)mpegaudiodec_fixed.o: $(SUBDIR)mpegaudio_tables.h
+$(SUBDIR)mpegaudiodec_float.o: $(SUBDIR)mpegaudio_tables.h
+$(SUBDIR)motionpixels.o: $(SUBDIR)motionpixels_tables.h
+$(SUBDIR)pcm.o: $(SUBDIR)pcm_tables.h
+$(SUBDIR)qdm2.o: $(SUBDIR)qdm2_tables.h
+endif
+HOSTPROGS = aac_tablegen                                                \
+            aacps_tablegen                                              \
+            cbrt_tablegen                                               \
+            cos_tablegen                                                \
+            dv_tablegen                                                 \
+            motionpixels_tablegen                                       \
+            mpegaudio_tablegen                                          \
+            pcm_tablegen                                                \
+            qdm2_tablegen                                               \
+            sinewin_tablegen                                            \
+
+2014.10.27 【计划】《libav configure脚本里：定义一系列组件，并定义了组件间的依赖关系：mov_demuxer_select="riffdec"》《FF_API_XVMC》
+2014.10.27 【计划】《if(0)优化的问题 /GL 全程序优化，去掉后，-o2才不会链接其中的函数》
+if (0) {
+			int ddd();
+			ddd();
+		}
+2014.10.28 【计划】《libavcodec\x86\makefile MMX-OBJS 见 makefile》
+SUBDIR_VARS := CLEANFILES EXAMPLES FFLIBS HOSTPROGS TESTPROGS TOOLS      \
+               HEADERS ARCH_HEADERS BUILT_HEADERS SKIPHEADERS            \
+               ARMV5TE-OBJS ARMV6-OBJS ARMV8-OBJS VFP-OBJS NEON-OBJS     \
+               ALTIVEC-OBJS MMX-OBJS YASM-OBJS                           \
+               OBJS HOSTOBJS TESTOBJS
+2014.10.28 【计划】《Waveform Audio API》《DirectX SDK》《Windows 8 SDK: Include files in "shared", "um", and "winrt"》《Windows XP 程序接口》
+2014.10.30 【计划】《c:\Program Files (x86)\Windows Kits\8.1\Include\shared\d3d9.h COM接口中，定义了C接口》
+#if !defined(__cplusplus) || defined(CINTERFACE)
+#define IDirect3DDevice9_QueryInterface(p,a,b) (p)->lpVtbl->QueryInterface(p,a,b)
+#define IDirect3DDevice9_AddRef(p) (p)->lpVtbl->AddRef(p)
+#define IDirect3DDevice9_Release(p) (p)->lpVtbl->Release(p)
+#define IDirect3DDevice9_TestCooperativeLevel(p) (p)->lpVtbl->TestCooperativeLevel(p)
+#define IDirect3DDevice9_GetAvailableTextureMem(p) (p)->lpVtbl->GetAvailableTextureMem(p)
+2014.10.30 【计划】《C++统一的初始化：集合式的初始化。把初始化与赋值分开。初始化列表构造函数std::initializer_list》
+typedef struct AVRational{
+    int num; ///< numerator
+    int den; ///< denominator
+} AVRational;
+#define AV_TIME_BASE_Q          (AVRational){1, AV_TIME_BASE}
+AVRational tmp = AV_TIME_BASE_Q; 错误，但在C99里编译是正确的
+改成下面的形式，在C++11里，可以编译成功：
+AVRational tmp = {1, AV_TIME_BASE}; 或者写 AVRational tmp{1, AV_TIME_BASE}
+《初始化列表 是C的概念 C++11的初始化列表构造函数 std::initializer_list》
+标准C++从C带来了初始化列表(initializer list)的概念
+vector<string> v = { "xyzzy", "plugh", "abracadabra" };
+void FunctionName(std::initializer_list<float> list); 
+FunctionName({1.0f, -3.45f, -0.4f});
+
+类std::initializer_list<>是个第一级的C++11标准程序库类型
+
+成员变量的初始化：C++11标准支持了就地初始化非静态成员
+class SomeClass
+{
+public:
+  SomeClass() {}
+  explicit SomeClass(int iNewValue) : iValue(iNewValue) {}
+ 
+private:
+  int iValue = 5;
+};
+
+2014.10.30 【计划】《C++11 委托构造函数：对象构造的改良》《显式虚函数重载》
+1. C++11允许（同一个类的）构造函数调用（同一个类的）其他构造函数，这种做法称作委托或转接(delegation)（这里的构造函数，都是同一个类的）
+2. 子类可”继承父类的构造函数“ 
+
+编译器会检查基底类是否存在一虚拟函数，与派生类中带有声明override 的虚拟函数，有相同的函数签名(signature)；若不存在，则会回报错误
+C++11 也提供指示字final，用来避免类被继承，或是基底类的函数被改写
+
+2014.10.30 【计划】《窄转换》
+编译器会检查基底类是否存在一虚拟函数，与派生类中带有声明override 的虚拟函数，有相同的函数签名(signature)；若不存在，则会回报错误
+    int i = 5.3;     //warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+    int tmp{ 5.3 };  //error C2397: conversion from 'double' to 'int' requires a narrowing conversion
+	
+2014.10.30 【计划】《CreateWindow GetDesktopWindow》
+2014.11.17 【计划】《颜色值的字节序，libav,directx,android等等》如：AV_PIX_FMT_ARGB D3DFMT_A8R8G8B8
+2014.11.17 【计划】《directx 顶点法向量 和 光照》
+2014.11.24 【计划】《libav *.v *.pc》
+2014.11.27 【计划】《几个开源项目的makefile分析，libav,x264》《eval展开规则》《GOOGLE KEEPER更新，是重新下载JS文件吧？》
+2014.12.01 【计划】《[swscaler @ 00D26DC0] No accelerated colorspace conversion found from yuv420p to rgba.》
+2014.12.02 【计划】《libav vc 编译 默认使用那个 C运行时库》《BITMAPFILEHEADER 写文件，强制，按字节对齐》《libav 内存对齐方式》
+#define HAVE_LOCAL_ALIGNED_8 1
+#define HAVE_LOCAL_ALIGNED_16 1
+#define HAVE_SIMD_ALIGN_16 1
+E:\libav\libavutil\internal.h
+#define LOCAL_ALIGNED_D(a, t, v, s, o, ...)             \
+    DECLARE_ALIGNED(a, t, la_##v) s o;                  \
+    t (*v) o = la_##v
+2014.12.08 【计划】《android res image name and drawable id》
+2014.12.09 【计划】《限定符，volatile, static, auto, extern, register》《blend modes》
+2014.12.23 【计划】《Android Studio 用法，hello world 工程》
+2014.12.24 【计划】《ffmpeg编译android 硬解码支持库 libstagefright》
+2015.1.2 【计划】《怎么判断是一个FTP的响应结束了，及其返回码？》
+2015.1.7 【计划】《android.media.MediaPlayer.txt MediaPlayer.java prepare() 调用流程 ->jni ->bind》
+2015.1.7 【计划】《java-jni-jniThrowException》
+2015.1.19 【计划】《avrescale AVRational 解释 a*b/c》
+2015.1.20 【计划】《write wave and bmp 代码片段》
+2015.1.24 【计划】《Android SDK Content Loader 一直不是 0%》
+2015.1.24 【计划】《error: undefined reference to 'g_opensl_methods_num' 但是 g_opensl_methods数组不报错》
+                   见 opensltest project, jni_entry.c
+				   《#define JNIEXPORT  __attribute__ ((visibility ("default")))》
+2015.1.24 【计划】 《libswscale 中的 sw 代表 software 即”软缩放“ 软件实现的缩放操作，其它各个库的函意 相对于 hardware video scaling support》
+2015.2.28 【计划】 有名的printk，与C语言的printf齐名
+2015.3.1 【计划】《MSVC整合YASM》H:\doc\Computer software\音视频技术\Libav\VC2013编译libav基础框架.txt
+2015.3.20 【计划】《fopen / open / c++ open / win32 _wsopen _sopen 分析》
+参考 E:\libav\libavutil\file_open.c
+2015.3.20 【计划】《AVIOContext 模块分析，并分离》写个 makefile 源文件，保持在，libav目录里，生成一个静态库调用
+2015.4.2 【计划】《c-struct-初始化及赋值》
+2015.4.2 【计划】《pts dts time_base ticks_per_frame》
+E:\doc\Computer software\音视频技术\video\video-stream-codec-time-base.txt
+2015.4.13 【计划】《linux 终端里， test 不能运行 ./test 可以运行》
+2015.4.14 【计划】《H264 I,B,P 解码顺序，必须缓存才能正常播放？B-frames H264 PROFILE》
+                     H264-PROFILE-FEATURE.jpg
+					 Baseline profile 不支持，其它profile支持，但不一定有 B 帧，需要在编码时设置
+					 编出一个带B帧的视频
+					 解码这个视频
+                     For Baseline profile, the number of B frames is always zero
+					 Note that Baseline Profile, such as that used by iPods, does not support B-frames. 
+					 https://sites.google.com/site/linuxencoding/x264-ffmpeg-mapping -bframes <integer> (x264)
+					 http://www.adobe.com/devnet/adobe-media-server/articles/h264_encoding.html
+					 
+2015.4.15 【计划】《avcodec_decode_video2 的 frame 是不是每次都重新分配空间？能够使用指定的空间吗》
+                  《AVCodecContext 的 get_buffer2 回调函数》
+				  
+2015.4.16 【计划】《gogo tester 、 goagent的原理 及代码分析》
+                  《android.graphics.Matrix 和 android.opengl.Matrix》
+2015.4.20 【计划】 《libav image2 demuxer and muxer》
+2015.4.23 【计划】《堆栈及函数调用方式》
+http://www.fmddlmyy.cn/text12.html
+2015.4.25 【计划】 E:\libav\libavutil\pixdesc.h
+AVPixFmtDescriptor
+2015.5.06 【计划】《pthread win32 static lib》 c 用 Pthread 、c++用 标准库
+2015.5.08 【计划】《隐藏在 android IDE 前后的知识》 简化操作，不等于不用了解细节
+2015.5.11 【计划】《gogoteser 原理，网站，IP 的证书，》
+2015.5.11 【计划】《使用命令行 来 编译 android 工程，细节太多，太繁杂，暂时不研究》
+2015.5.14  【计划】《c-HUGE_VALL》
+2015.5.25  【计划】《C++ RTTI 用例子解释用法》
